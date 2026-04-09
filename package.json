@@ -1,0 +1,32 @@
+{
+  "name": "xterm-mcp",
+  "version": "0.1.0",
+  "description": "Browser terminal with API endpoints for agent-driven TUI testing",
+  "type": "commonjs",
+  "bin": {
+    "xterm-mcp": "./bin/xterm-mcp.js"
+  },
+  "scripts": {
+    "start": "node ./bin/xterm-mcp.js serve",
+    "dev": "node ./bin/xterm-mcp.js serve --open",
+    "check": "node --check ./src/server.js"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "express": "^4.21.2",
+    "node-pty": "^1.0.0",
+    "open": "^10.1.0",
+    "ws": "^8.18.3"
+  },
+  "keywords": [
+    "xterm",
+    "terminal",
+    "mcp",
+    "tui",
+    "automation"
+  ],
+  "license": "MIT"
+}
