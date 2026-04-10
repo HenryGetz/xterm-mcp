@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>xterm-mcp</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/xterm@5.5.0/css/xterm.min.css"
-    />
+    <link rel="stylesheet" href="/vendor/xterm/xterm.css" />
     <style>
       :root {
         --bg: #111317;
@@ -73,8 +70,8 @@
     </div>
     <div id="terminal"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/xterm@5.5.0/lib/xterm.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.8.0/lib/xterm-addon-fit.min.js"></script>
+    <script src="/vendor/xterm/xterm.js"></script>
+    <script src="/vendor/xterm-addon-fit/addon-fit.js"></script>
     <script>
       const statusEl = document.getElementById("status");
       const container = document.getElementById("terminal");
@@ -154,4 +151,3 @@
     </script>
   </body>
 </html>
-

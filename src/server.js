@@ -144,6 +144,14 @@ async function startServer(config) {
   });
 
   app.use(express.json({ limit: "256kb" }));
+  app.use(
+    "/vendor/xterm",
+    express.static(path.join(__dirname, "..", "node_modules", "@xterm", "xterm", "lib"))
+  );
+  app.use(
+    "/vendor/xterm-addon-fit",
+    express.static(path.join(__dirname, "..", "node_modules", "@xterm", "addon-fit", "lib"))
+  );
   app.use(express.static(path.join(__dirname, "..", "public")));
 
   app.use((req, res, next) => {

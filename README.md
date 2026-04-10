@@ -28,6 +28,10 @@ xterm-mcp serve --open
 
 Then open `http://127.0.0.1:8787`.
 
+Security default:
+- CLI default bind host is `127.0.0.1` (local machine only, not LAN).
+- To expose to LAN, you must opt in with `--host 0.0.0.0`.
+
 ## Core commands
 
 ```bash
@@ -73,7 +77,8 @@ Run inside a container:
 docker compose up --build
 ```
 
+`docker-compose.yml` binds host port to `127.0.0.1:8787` by default (local machine only).
+
 ## Why this exists
 
 Agentic coding tools are usually weak at testing TUIs because they cannot reliably "drive" a real terminal. `xterm-mcp` gives an installable bridge with real keystrokes + terminal output capture so agents can iterate on terminal UIs like any other UI surface.
-
